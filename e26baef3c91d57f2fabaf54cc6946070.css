@@ -1,0 +1,105 @@
+body {
+  background: #33A8FF;
+  margin: 0;
+  padding: 8px;
+}
+
+.main {
+  display: flex;
+}
+
+.column {
+  width: 100vh;
+  height: auto;
+  font-size: 30px;
+  text-transform:uppercase;
+  font-weight:bold;
+  background: #EAEDED;
+  margin-right: 30px;
+  padding-left: 20px;
+}
+
+.column:first-child {
+  margin-left: 30px;
+}
+
+.showAddCardPanel {
+  font-size: 20px;
+  text-transform:none;
+  color: #566573;
+  padding: 20px 0;
+}
+
+.addCardPanel {
+  width: 69vh;
+  background-color: white;
+  margin-top: 20px;
+}
+
+.addCardButton {
+  background-color: green;
+  display: block;
+  height: 50px;
+  width: 150px;
+  color: white;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.newCardContent {
+  width:68vh;
+  height: 50px;
+}
+
+.cardContainer {
+  display: block;
+  text-transform: none;
+  font-weight: normal;
+  font-size: 20px;
+  margin-top: 30px;
+  background-color: #F5F5F5;
+  margin-right: 20px;
+  padding-left: 10px;
+  height: 120px;
+}
+
+.cardContainer.dragging {
+  cursor: pointer;
+  position: absolute;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.cardContainer:hover .remove {
+  border: 1px solid #F0FFFF;
+  font-size: 15px;
+  color: #A9A9A9;
+  text-align: center;
+  width: 2vh;
+  background-color: #F0FFFF;
+  border-radius: 4px;
+  position: relative;
+  left: 95%;
+  top: -10px;
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.closeAddCardPanel {
+  margin-left: 165px;
+  margin-top: -50px;
+}
+
+.addCardErrorText {
+  color: red;
+  font-size: 20px;
+  text-transform: none;
+  font-weight: normal;
+}
+
+.remove {
+  display: none;
+ }
