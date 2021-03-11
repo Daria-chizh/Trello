@@ -1,5 +1,18 @@
-let lastId = Number(localStorage.getItem('lastId'));
-const data = JSON.parse(localStorage.getItem('tasks'));
+function loadDataFromLocalStorage() {
+  const stored = localStorage.getItem('tasks');
+  if (!stored) {
+    return [
+      { containerId: 'todo', tasks: [] },
+      { containerId: 'in-progress', tasks: [] },
+      { containerId: 'done', tasks: [] },
+    ];
+  }
+
+  return JSON.parse(stored);
+}
+
+let lastId = Number(localStorage.getItem('lastId') || 1);
+const data = loadDataFromLocalStorage();
 
 function removeTaskFromColumn(column, item) {
   const { tasks } = column;
